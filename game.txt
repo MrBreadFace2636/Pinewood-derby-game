@@ -1,0 +1,32 @@
+Executive summary
+	A racing game modeled after pinewood derby
+
+Gameplay
+	Configure your car to be as fast as posible
+
+Mechanics
+	2d vehicle physics
+	Can be played on only a keyboard and mouse
+
+Game elements
+	Cars on a track
+	Car configuration GUI
+
+Assets
+	Cartoony pixel art
+	Sound effects
+
+Game loop
+	Splash screen
+	Player count selection
+		Max 4 players
+		Exit botton
+	each player configures their car in turns
+		Next and previous buttons to cycle through the players' cars
+	Fixed start button at the bottom of the car config scene
+	Transition to a count down at the start of the track
+	The cars race down track
+	A car finishes
+	A declaration of the winner with the time it took them to finish
+	Display the placing and time of the other cars
+	A continue button to return to the player count selection screen
