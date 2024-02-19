@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpc1qajsl3u3s"]
+
+[ext_resource type="PackedScene" uid="uid://crkvxer1ny5ol" path="res://Scenes/Car/Car.tscn" id="1_43qm5"]
+[ext_resource type="PackedScene" uid="uid://jebq7j76vs2h" path="res://Scenes/Track/Track.tscn" id="2_dpgck"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dojhk"]
+
+[node name="Race" type="Node2D"]
+
+[node name="Car2" parent="." instance=ExtResource("1_43qm5")]
+position = Vector2(-1106, -681)
+
+[node name="FrontWheelPin" parent="Car2" index="2"]
+motor_target_velocity = -0.00174533
+
+[node name="RearWheelPin" parent="Car2" index="3"]
+motor_target_velocity = -0.00174533
+
+[node name="FrontWheelBody" parent="Car2" index="4"]
+physics_material_override = SubResource("PhysicsMaterial_dojhk")
+center_of_mass_mode = 1
+
+[node name="Car" parent="." instance=ExtResource("1_43qm5")]
+position = Vector2(-1136, -696)
+
+[node name="Track" parent="." instance=ExtResource("2_dpgck")]
+
+[editable path="Car2"]

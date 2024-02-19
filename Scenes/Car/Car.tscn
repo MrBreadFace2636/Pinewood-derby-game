@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://crkvxer1ny5ol"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mev6c"]
+friction = 0.45
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8kkuw"]
+size = Vector2(32, 6)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7loiy"]
+radius = 2.75
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uhwje"]
+radius = 2.75
+
+[node name="Car" type="RigidBody2D"]
+collision_layer = 2
+physics_material_override = SubResource("PhysicsMaterial_mev6c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8kkuw")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+
+[node name="FrontWheelPin" type="PinJoint2D" parent="."]
+position = Vector2(13, 3)
+node_a = NodePath("..")
+node_b = NodePath("../FrontWheelBody")
+
+[node name="RearWheelPin" type="PinJoint2D" parent="."]
+position = Vector2(-13, 3)
+node_a = NodePath("..")
+node_b = NodePath("../RearWheelBody")
+
+[node name="FrontWheelBody" type="RigidBody2D" parent="."]
+position = Vector2(13, 3)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FrontWheelBody"]
+shape = SubResource("CircleShape2D_7loiy")
+
+[node name="RearWheelBody" type="RigidBody2D" parent="."]
+position = Vector2(-13, 3)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RearWheelBody"]
+shape = SubResource("CircleShape2D_uhwje")
