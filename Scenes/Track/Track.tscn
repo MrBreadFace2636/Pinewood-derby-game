@@ -1,19 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://jebq7j76vs2h"]
+[gd_scene load_steps=4 format=3 uid="uid://jebq7j76vs2h"]
+
+[ext_resource type="Script" path="res://Scenes/Track/Track.gd" id="1_5yfba"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7qgte"]
 size = Vector2(2720, 20)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ax5ca"]
-size = Vector2(197.5, 20)
+[sub_resource type="Curve2D" id="Curve2D_g6c6g"]
+bake_interval = 250.25
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1173, -689, 0, 0, 0, 0, -463, -280, -309.751, -163.981, 309.751, 163.981, 588, 327, 0, 0, 0, 0, 1558, 459, 0, 0, 0, 0, 1540, 914, 0, 0, 0, 0, -1044, 885, 0, 0, 0, 0, -1121, -440, 0, 0, 0, 0, -1173, -689)
+}
+point_count = 8
 
 [node name="Track" type="StaticBody2D"]
 collision_mask = 2
+script = ExtResource("1_5yfba")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 0.523599
 shape = SubResource("RectangleShape2D_7qgte")
+disabled = true
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(-318, -109)
-rotation = -0.464739
-shape = SubResource("RectangleShape2D_ax5ca")
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_g6c6g")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
