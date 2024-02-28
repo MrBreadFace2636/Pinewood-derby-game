@@ -12,7 +12,11 @@ func _process(delta):
 	pass
 
 
-func _on_button_pressed():
+func _on_play_button_pressed():
 	var tree = get_tree()
 	tree.change_scene_to_packed(play_count_scene)
-	
+
+
+func _on_quit_button_pressed():
+	var tree = get_tree()
+	tree.quit()
