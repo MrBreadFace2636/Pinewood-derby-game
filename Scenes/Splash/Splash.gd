@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-var play_count_scene = preload("res://Scenes/PlayerCount/PlayerCount.tscn")
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,7 +14,7 @@ func _process(delta):
 
 func _on_play_button_pressed():
 	var tree = get_tree()
-	tree.change_scene_to_packed(play_count_scene)
+	tree.change_scene_to_file("res://Scenes/PlayerCount/PlayerCount.tscn")
 
 
 func _on_quit_button_pressed():
