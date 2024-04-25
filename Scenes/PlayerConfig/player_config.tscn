@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://beiuv35ravm3e"]
+[gd_scene load_steps=6 format=3 uid="uid://beiuv35ravm3e"]
 
+[ext_resource type="Script" path="res://Scenes/PlayerConfig/player_config.gd" id="1_h7tbr"]
 [ext_resource type="Texture2D" uid="uid://digjvh33amclg" path="res://Scenes/PlayerConfig/car.png" id="1_wt2mr"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_i0luw"]
@@ -9,6 +10,7 @@
 [sub_resource type="ButtonGroup" id="ButtonGroup_k8675"]
 
 [node name="PlayerConfig" type="CanvasLayer"]
+script = ExtResource("1_h7tbr")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchors_preset = 15
@@ -28,9 +30,11 @@ layout_mode = 2
 theme_override_constants/margin_bottom = 15
 
 [node name="PlayerName" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer/MarginContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "Player 1"
+text = "Player"
+horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
@@ -184,7 +188,8 @@ layout_mode = 2
 layout_mode = 2
 theme_override_constants/margin_top = 50
 
-[node name="Button" type="Button" parent="CenterContainer/VBoxContainer/CenterContainer2/MarginContainer"]
+[node name="NextButton" type="Button" parent="CenterContainer/VBoxContainer/CenterContainer2/MarginContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Next"
@@ -200,3 +205,6 @@ theme_override_constants/margin_top = 20
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Back"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer2/MarginContainer/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer3/MarginContainer2/Button" to="." method="_on_back_button_pressed"]

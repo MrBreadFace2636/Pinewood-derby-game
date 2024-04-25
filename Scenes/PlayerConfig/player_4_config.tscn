@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://cybm4mvvlfjw1"]
+
+[ext_resource type="PackedScene" uid="uid://beiuv35ravm3e" path="res://Scenes/PlayerConfig/player_config.tscn" id="1_6rbn4"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_0bqie"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_phsep"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_oy8p1"]
+
+[node name="PlayerConfig" instance=ExtResource("1_6rbn4")]
+player_number = 4
+
+[node name="Button" parent="CenterContainer/VBoxContainer/VBoxContainer/Bodies" index="1"]
+button_group = SubResource("ButtonGroup_0bqie")
+
+[node name="Button2" parent="CenterContainer/VBoxContainer/VBoxContainer/Bodies" index="2"]
+button_group = SubResource("ButtonGroup_0bqie")
+
+[node name="Button3" parent="CenterContainer/VBoxContainer/VBoxContainer/Bodies" index="3"]
+button_group = SubResource("ButtonGroup_0bqie")
+
+[node name="Button4" parent="CenterContainer/VBoxContainer/VBoxContainer/Bodies" index="4"]
+button_group = SubResource("ButtonGroup_0bqie")
+
+[node name="Button5" parent="CenterContainer/VBoxContainer/VBoxContainer/Bodies" index="5"]
+button_group = SubResource("ButtonGroup_0bqie")
+
+[node name="Button6" parent="CenterContainer/VBoxContainer/VBoxContainer/Wheels" index="1"]
+button_group = SubResource("ButtonGroup_phsep")
+
+[node name="Button7" parent="CenterContainer/VBoxContainer/VBoxContainer/Wheels" index="2"]
+button_group = SubResource("ButtonGroup_phsep")
+
+[node name="Button8" parent="CenterContainer/VBoxContainer/VBoxContainer/Wheels" index="3"]
+button_group = SubResource("ButtonGroup_phsep")
+
+[node name="Button9" parent="CenterContainer/VBoxContainer/VBoxContainer/Wheels" index="4"]
+button_group = SubResource("ButtonGroup_phsep")
+
+[node name="Button10" parent="CenterContainer/VBoxContainer/VBoxContainer/Wheels" index="5"]
+button_group = SubResource("ButtonGroup_phsep")
+
+[node name="Button11" parent="CenterContainer/VBoxContainer/VBoxContainer/Aero" index="1"]
+button_group = SubResource("ButtonGroup_oy8p1")
+
+[node name="Button12" parent="CenterContainer/VBoxContainer/VBoxContainer/Aero" index="2"]
+button_group = SubResource("ButtonGroup_oy8p1")
+
+[node name="Button13" parent="CenterContainer/VBoxContainer/VBoxContainer/Aero" index="3"]
+button_group = SubResource("ButtonGroup_oy8p1")
+
+[node name="Button14" parent="CenterContainer/VBoxContainer/VBoxContainer/Aero" index="4"]
+button_group = SubResource("ButtonGroup_oy8p1")
+
+[node name="Button15" parent="CenterContainer/VBoxContainer/VBoxContainer/Aero" index="5"]
+button_group = SubResource("ButtonGroup_oy8p1")

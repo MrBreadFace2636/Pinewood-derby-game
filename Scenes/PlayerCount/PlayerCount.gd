@@ -10,4 +10,4 @@ func _on_back_button_pressed():
 func _on_next_button_pressed():
 	Globals.player_count = count_button_group.get_pressed_button().text
 	var tree = get_tree()
-	tree.change_scene_to_file("res://Scenes/PlayerConfig/player_config.tscn")
+	tree.change_scene_to_file("res://Scenes/PlayerConfig/player_1_config.tscn")
