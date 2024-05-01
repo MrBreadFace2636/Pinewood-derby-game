@@ -2,12 +2,9 @@
 
 [ext_resource type="Script" path="res://Scenes/PlayerConfig/player_config.gd" id="1_h7tbr"]
 [ext_resource type="Texture2D" uid="uid://digjvh33amclg" path="res://Scenes/PlayerConfig/car.png" id="1_wt2mr"]
-
-[sub_resource type="ButtonGroup" id="ButtonGroup_i0luw"]
-
-[sub_resource type="ButtonGroup" id="ButtonGroup_hrx2e"]
-
-[sub_resource type="ButtonGroup" id="ButtonGroup_k8675"]
+[ext_resource type="ButtonGroup" uid="uid://tw24tooi27yv" path="res://Scenes/PlayerConfig/bodies_button_group.tres" id="2_t4y74"]
+[ext_resource type="ButtonGroup" uid="uid://y65fl1wktqe7" path="res://Scenes/PlayerConfig/wheels_button_group.tres" id="4_vfdgv"]
+[ext_resource type="ButtonGroup" uid="uid://d3x0gf6ulldha" path="res://Scenes/PlayerConfig/aero_button_group.tres" id="5_vh0y8"]
 
 [node name="PlayerConfig" type="CanvasLayer"]
 script = ExtResource("1_h7tbr")
@@ -51,35 +48,46 @@ theme_override_font_sizes/font_size = 25
 text = "Bodies"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer/Bodies"]
+[node name="BodiesButton" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer/Bodies"]
+unique_name_in_owner = true
 layout_mode = 2
 toggle_mode = true
-button_group = SubResource("ButtonGroup_i0luw")
+button_group = ExtResource("2_t4y74")
 icon = ExtResource("1_wt2mr")
+metadata/ButtonIndex = 0
+metadata/ButtonType = "bodies"
 
 [node name="Button2" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer/Bodies"]
 layout_mode = 2
 toggle_mode = true
-button_group = SubResource("ButtonGroup_i0luw")
+button_group = ExtResource("2_t4y74")
 icon = ExtResource("1_wt2mr")
+metadata/ButtonIndex = 1
+metadata/ButtonType = "bodies"
 
 [node name="Button3" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer/Bodies"]
 layout_mode = 2
 toggle_mode = true
-button_group = SubResource("ButtonGroup_i0luw")
+button_group = ExtResource("2_t4y74")
 icon = ExtResource("1_wt2mr")
+metadata/ButtonIndex = 2
+metadata/ButtonType = "bodies"
 
 [node name="Button4" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer/Bodies"]
 layout_mode = 2
 toggle_mode = true
-button_group = SubResource("ButtonGroup_i0luw")
+button_group = ExtResource("2_t4y74")
 icon = ExtResource("1_wt2mr")
+metadata/ButtonIndex = 3
+metadata/ButtonType = "bodies"
 
 [node name="Button5" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer/Bodies"]
 layout_mode = 2
 toggle_mode = true
-button_group = SubResource("ButtonGroup_i0luw")
+button_group = ExtResource("2_t4y74")
 icon = ExtResource("1_wt2mr")
+metadata/ButtonIndex = 4
+metadata/ButtonType = "bodies"
 
 [node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/VBoxContainer/Bodies"]
 custom_minimum_size = Vector2(100, 0)
@@ -98,35 +106,46 @@ theme_override_font_sizes/font_size = 25
 text = "Wheels"
 horizontal_alignment = 1
 
-[node name="Button6" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer/Wheels"]
+[node name="WheelsButton" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer/Wheels"]
+unique_name_in_owner = true
 layout_mode = 2
 toggle_mode = true
-button_group = SubResource("ButtonGroup_hrx2e")
+button_group = ExtResource("4_vfdgv")
 icon = ExtResource("1_wt2mr")
+metadata/ButtonIndex = 0
+metadata/ButtonType = "Wheels"
 
 [node name="Button7" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer/Wheels"]
 layout_mode = 2
 toggle_mode = true
-button_group = SubResource("ButtonGroup_hrx2e")
+button_group = ExtResource("4_vfdgv")
 icon = ExtResource("1_wt2mr")
+metadata/ButtonIndex = 1
+metadata/ButtonType = "Wheels"
 
 [node name="Button8" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer/Wheels"]
 layout_mode = 2
 toggle_mode = true
-button_group = SubResource("ButtonGroup_hrx2e")
+button_group = ExtResource("4_vfdgv")
 icon = ExtResource("1_wt2mr")
+metadata/ButtonIndex = 2
+metadata/ButtonType = "Wheels"
 
 [node name="Button9" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer/Wheels"]
 layout_mode = 2
 toggle_mode = true
-button_group = SubResource("ButtonGroup_hrx2e")
+button_group = ExtResource("4_vfdgv")
 icon = ExtResource("1_wt2mr")
+metadata/ButtonIndex = 3
+metadata/ButtonType = "Wheels"
 
 [node name="Button10" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer/Wheels"]
 layout_mode = 2
 toggle_mode = true
-button_group = SubResource("ButtonGroup_hrx2e")
+button_group = ExtResource("4_vfdgv")
 icon = ExtResource("1_wt2mr")
+metadata/ButtonIndex = 4
+metadata/ButtonTpye = "Wheels"
 
 [node name="Label3" type="Label" parent="CenterContainer/VBoxContainer/VBoxContainer/Wheels"]
 custom_minimum_size = Vector2(100, 0)
@@ -145,35 +164,46 @@ theme_override_font_sizes/font_size = 25
 text = "Aero"
 horizontal_alignment = 1
 
-[node name="Button11" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer/Aero"]
+[node name="AeroButton" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer/Aero"]
+unique_name_in_owner = true
 layout_mode = 2
 toggle_mode = true
-button_group = SubResource("ButtonGroup_k8675")
+button_group = ExtResource("5_vh0y8")
 icon = ExtResource("1_wt2mr")
+metadata/ButtonIndex = 0
+metadata/ButtonType = "Aero"
 
 [node name="Button12" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer/Aero"]
 layout_mode = 2
 toggle_mode = true
-button_group = SubResource("ButtonGroup_k8675")
+button_group = ExtResource("5_vh0y8")
 icon = ExtResource("1_wt2mr")
+metadata/ButtonIndex = 1
+metadata/ButtonType = "Aero"
 
 [node name="Button13" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer/Aero"]
 layout_mode = 2
 toggle_mode = true
-button_group = SubResource("ButtonGroup_k8675")
+button_group = ExtResource("5_vh0y8")
 icon = ExtResource("1_wt2mr")
+metadata/ButtonIndex = 2
+metadata/ButtonType = "Aero"
 
 [node name="Button14" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer/Aero"]
 layout_mode = 2
 toggle_mode = true
-button_group = SubResource("ButtonGroup_k8675")
+button_group = ExtResource("5_vh0y8")
 icon = ExtResource("1_wt2mr")
+metadata/ButtonIndex = 3
+metadata/ButtonType = "Aero"
 
 [node name="Button15" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer/Aero"]
 layout_mode = 2
 toggle_mode = true
-button_group = SubResource("ButtonGroup_k8675")
+button_group = ExtResource("5_vh0y8")
 icon = ExtResource("1_wt2mr")
+metadata/ButtonIndex = 4
+metadata/ButtonType = "Aero"
 
 [node name="Label4" type="Label" parent="CenterContainer/VBoxContainer/VBoxContainer/Aero"]
 custom_minimum_size = Vector2(100, 0)

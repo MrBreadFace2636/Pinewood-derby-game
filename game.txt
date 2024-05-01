@@ -30,3 +30,7 @@ Game loop
 	A declaration of the winner with the time it took them to finish
 	Display the placing and time of the other cars
 	A continue button to return to the player count selection screen
+	
+To do
+	Record player config data
+	Add variation to the config
