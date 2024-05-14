@@ -25,5 +25,23 @@ var radius_map = {
 var body_mass_map = {
 	"0": 10,
 	"1": 12,
-	"2": 15
+	"2": 13.5
+}
+
+var angular_damp_map = {
+	"0": 0,
+	"1": 0.001,
+	"2": 0.002
+}
+
+var body_com_map = {
+	"0": Vector2(-70,0),
+	"1": Vector2.ZERO,
+	"2": Vector2(60,0)
+}
+
+var wheel_mass_map = {
+	"0": 3,
+	"1": 4,
+	"2": 5
 }

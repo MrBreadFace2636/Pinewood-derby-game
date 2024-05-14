@@ -39,6 +39,10 @@ game_escape={
 2d_physics/layer_1="Track"
 2d_physics/layer_2="Car"
 
+[physics]
+
+2d/default_angular_damp=0.0
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

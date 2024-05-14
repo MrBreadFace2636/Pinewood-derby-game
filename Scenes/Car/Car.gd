@@ -11,6 +11,10 @@ var player_number
 
 @onready var front_wheel_shape = %FrontWheelShape
 
+@onready var front_wheel_body = $FrontWheelBody
+
+@onready var rear_wheel_body = $RearWheelBody
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var body_number = Globals.player_config[str(player_number)]["body"]
@@ -32,6 +36,17 @@ func _ready():
 	
 	var body_mass = Globals.body_mass_map[str(body_number)]
 	mass = body_mass
+	
+	var wheel_damp = Globals.angular_damp_map[str(wheel_number)]
+	front_wheel_body.angular_damp = wheel_damp
+	rear_wheel_body.angular_damp = wheel_damp
+	
+	var body_com = Globals.body_com_map[str(body_number)]
+	center_of_mass = body_com
+	
+	var wheel_mass = Globals.wheel_mass_map[str(wheel_number)]
+	front_wheel_body.mass = wheel_mass
+	rear_wheel_body.mass = wheel_mass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
