@@ -1,4 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://crkvxer1ny5ol"]
+[gd_scene load_steps=6 format=3 uid="uid://crkvxer1ny5ol"]
+
+[ext_resource type="Script" path="res://Scenes/Car/Car.gd" id="1_4448l"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mev6c"]
 friction = 0.45
@@ -16,32 +18,39 @@ radius = 27.5
 collision_layer = 2
 mass = 10.0
 physics_material_override = SubResource("PhysicsMaterial_mev6c")
+script = ExtResource("1_4448l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_8kkuw")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="FrontWheelPin" type="PinJoint2D" parent="."]
-position = Vector2(130, 30)
-node_a = NodePath("..")
-node_b = NodePath("../FrontWheelBody")
-
-[node name="RearWheelPin" type="PinJoint2D" parent="."]
-position = Vector2(-130, 30)
-node_a = NodePath("..")
-node_b = NodePath("../RearWheelBody")
-
 [node name="FrontWheelBody" type="RigidBody2D" parent="."]
-position = Vector2(130, 30)
+position = Vector2(110, 30)
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FrontWheelBody"]
 shape = SubResource("CircleShape2D_7loiy")
 
+[node name="FrontWheelSprite" type="Sprite2D" parent="FrontWheelBody"]
+unique_name_in_owner = true
+scale = Vector2(10, 10)
+
+[node name="FrontWheelPin" type="PinJoint2D" parent="FrontWheelBody"]
+node_a = NodePath("../..")
+node_b = NodePath("..")
+
 [node name="RearWheelBody" type="RigidBody2D" parent="."]
-position = Vector2(-130, 30)
+position = Vector2(-110, 30)
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RearWheelBody"]
 shape = SubResource("CircleShape2D_uhwje")
+
+[node name="RearWheelSprite" type="Sprite2D" parent="RearWheelBody"]
+unique_name_in_owner = true
+scale = Vector2(10, 10)
+
+[node name="RearWheelPin" type="PinJoint2D" parent="RearWheelBody"]
+node_a = NodePath("../..")
+node_b = NodePath("..")
