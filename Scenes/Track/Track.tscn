@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/Track/Track.gd" id="1_5yfba"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7qgte"]
-size = Vector2(2720, 20)
+size = Vector2(27200, 20)
 
 [sub_resource type="Curve2D" id="Curve2D_g6c6g"]
 bake_interval = 250.25
@@ -22,6 +22,8 @@ shape = SubResource("RectangleShape2D_7qgte")
 disabled = true
 
 [node name="Path2D" type="Path2D" parent="."]
+scale = Vector2(10, 10)
 curve = SubResource("Curve2D_g6c6g")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(10, 10)

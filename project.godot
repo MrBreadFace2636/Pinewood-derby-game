@@ -39,10 +39,6 @@ game_escape={
 2d_physics/layer_1="Track"
 2d_physics/layer_2="Car"
 
-[physics]
-
-2d/physics_engine="Box2D"
-
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
