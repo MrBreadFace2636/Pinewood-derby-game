@@ -29,6 +29,9 @@ func _ready():
 	var wheel_radius = Globals.radius_map[str(wheel_number)]
 	front_wheel_shape.shape.radius = wheel_radius
 	rear_wheel_shape.shape.radius = wheel_radius
+	
+	var body_mass = Globals.body_mass_map[str(body_number)]
+	mass = body_mass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

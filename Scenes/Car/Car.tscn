@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/Car/Car.gd" id="1_4448l"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mev6c"]
+resource_local_to_scene = true
 friction = 0.45
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8kkuw"]
