@@ -7,6 +7,10 @@ var player_number
 
 @onready var rear_wheel_sprite = %RearWheelSprite
 
+@onready var rear_wheel_shape = %RearWheelShape
+
+@onready var front_wheel_shape = %FrontWheelShape
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var body_number = Globals.player_config[str(player_number)]["body"]
@@ -21,6 +25,10 @@ func _ready():
 	var wheel_texture = Globals.wheel_map[str(wheel_number)]
 	front_wheel_sprite.texture = wheel_texture
 	rear_wheel_sprite.texture = wheel_texture
+	
+	var wheel_radius = Globals.radius_map[str(wheel_number)]
+	front_wheel_shape.shape.radius = wheel_radius
+	rear_wheel_shape.shape.radius = wheel_radius
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -15,3 +15,9 @@ var wheel_map = {
 	"1": preload("res://Scenes/Car/wheel5x5.png"),
 	"2": preload("res://Scenes/Car/wheel6x6.png")
 }
+
+var radius_map = {
+	"0": 20.0,
+	"1": 25.0,
+	"2": 30.0
+}

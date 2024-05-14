@@ -9,9 +9,11 @@ friction = 0.45
 size = Vector2(320, 60)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7loiy"]
+resource_local_to_scene = true
 radius = 27.5
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uhwje"]
+resource_local_to_scene = true
 radius = 27.5
 
 [node name="Car" type="RigidBody2D"]
@@ -29,7 +31,8 @@ shape = SubResource("RectangleShape2D_8kkuw")
 position = Vector2(110, 30)
 collision_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FrontWheelBody"]
+[node name="FrontWheelShape" type="CollisionShape2D" parent="FrontWheelBody"]
+unique_name_in_owner = true
 shape = SubResource("CircleShape2D_7loiy")
 
 [node name="FrontWheelSprite" type="Sprite2D" parent="FrontWheelBody"]
@@ -44,7 +47,8 @@ node_b = NodePath("..")
 position = Vector2(-110, 30)
 collision_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RearWheelBody"]
+[node name="RearWheelShape" type="CollisionShape2D" parent="RearWheelBody"]
+unique_name_in_owner = true
 shape = SubResource("CircleShape2D_uhwje")
 
 [node name="RearWheelSprite" type="Sprite2D" parent="RearWheelBody"]
